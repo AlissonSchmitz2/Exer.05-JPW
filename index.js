@@ -11,7 +11,11 @@ function show_snack(message){
 }
 
 function validateUser(email, password){
-    // TODO
+    if(!email.includes('@unesc.net') && !password !== 'samsepiol') {
+        show_snack('Usuário/Senha inválida!')
+        return false
+    }
+
     return true
 }
 
@@ -23,4 +27,4 @@ form.addEventListener(function(event){
     if(!validateUser(email, password)) return false
 
     form.submit()
-})
+},)
